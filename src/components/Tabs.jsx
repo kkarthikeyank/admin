@@ -4,12 +4,7 @@ import Homecards from './Homecards';
 
 const Tabs = () => {
 const[products,setProduct]=useState([])
-  useEffect(() => {
-    fetch('https://product-details.onrender.com/api/courses')
-      .then((response) => response.json())
-      .then((data) => { setProduct(data?.data) })
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
+ 
   return (
   <div>
   <ul class="nav nav-pills mb-8" id="pills-tab" role="tablist">
@@ -27,7 +22,7 @@ const[products,setProduct]=useState([])
 
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-  <Homecards  productsData={products}/>
+  <Homecards  />
      </div>
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">This is some placeholder content the Home tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and </div>
   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">This is some placeholder content the Home tab's associated content. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and </div>
