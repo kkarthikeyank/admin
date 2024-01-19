@@ -10,7 +10,7 @@ const Homecards = () => {
       .then((response) => response.json())
       .then((data) => { setProduct(data?.data) })
       .catch((error) => console.error('Error fetching data:', error));
-  }, []);
+  }, [product]);
 
   return (
     <div class="row row-cols-1 row-cols-md-3 g-4">

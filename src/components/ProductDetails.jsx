@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import carImage from "../assets/image/evgeny-tchebotarev-aiwuLjLPFnU-unsplash.jpg";
 import { useLocation } from "react-router-dom";
+import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -14,7 +15,7 @@ const ProductDetails = () => {
         setAlllist(data?.data);
       })
       .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  }, [listAll]);
   return (
     <div className="product_details">
       <nav class="navbar fixed-top navbar-light bg-light">
@@ -24,6 +25,8 @@ const ProductDetails = () => {
           </a>
         </div>
       </nav>
+      <Link to={`/allDetails/2`}>
+
       <div class="card" style={{ width: "18rem", marginTop: "90px" }}>
         <img src={carImage} class="card-img-top" alt="..." />
         <div class="card-body">
@@ -37,6 +40,7 @@ const ProductDetails = () => {
           </a>
         </div>
       </div>
+</Link>
     </div>
   );
 };

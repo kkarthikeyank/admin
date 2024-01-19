@@ -16,3 +16,34 @@
 .product_details{
   margin: 30px;
 }
+
+.checked {
+  color: orange;
+}
+
+
+.row-sec{
+  padding: 20px;
+    margin-top: 40px;
+    background-color: rgb(237 237 237 / 64%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cal-right{
+  display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 20px;
+}
+
+.rating-sec{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 20px;
+}
+
+.list-group-item{
+  font-size: 18px;
+  font-weight: 600;
+}
