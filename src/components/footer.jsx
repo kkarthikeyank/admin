@@ -2,62 +2,72 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-         <section class="footer">
-      <div class="footer-row">
-        <div class="footer-col">
-          <h4>Info</h4>
-          <ul class="links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Compressions</a></li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Collection</a></li>
-          </ul>
+    <>
+      <div className="total_footer" id="contactUs" style={{marginTop:"30px"}}>
+        <div className="border_footer container" >
+            <div className="row">
+                <div className="col-md-10 col-lg-4">
+                    {/* <img src="./Images/spantag.png"  className="footer_icon"/> */}
+                    <p className="footer_email"><br/>
+                     
+                        
+                        Email: .com<br/>
+                        Phone: 9751849842</p>
+                    <ul className="social_ul">
+                        <li><a href="#" className="fa fa-facebook"></a>
+                        </li>
+                        <li>
+                            <a href="#" className="fa fa-instagram"></a>
+                        </li>
+                        <li>
+                            <a href="#" className="fa fa-google"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div className="col-md-3 col-lg-2 offset-lg-1">
+                    <div className="footer_product">
+                        <h5 className="h5_product">Products</h5>
+                        <ul>
+                            <li><a  >How It Works?</a></li>
+                            <li><a>Integrations</a></li>
+                            <li><a>Product Updates</a></li>
+                            <li><a  >Our Pricing</a></li>
+                            <li><a >FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col-md-3 col-lg-2">
+                    <div className="footer_product">
+                        <h5 className="h5_product">Company</h5>
+                        <ul>
+                            <li><a>About Us</a></li>
+                            <li><a>Careers</a></li>
+                            <li><a>Press & Media</a></li>
+                            <li><a>Our Blog</a></li>
+                            <li><a>Advertising</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col-md-6 col-lg-3">
+                    <div className="footer_Subscribe">
+                        <h5 className="h5_product">Subscribe Us:</h5>
+                        <p>Stay up to date with our latest news,<br />
+                            updates and our new products</p>
+                        <div>
+                            <input className="form_footer" type="email" placeholder="Email Address" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="footer-col">
-          <h4>Explore</h4>
-          <ul class="links">
-            <li><a href="#">Free Designs</a></li>
-            <li><a href="#">Latest Designs</a></li>
-            <li><a href="#">Themes</a></li>
-            <li><a href="#">Popular Designs</a></li>
-            <li><a href="#">Art Skills</a></li>
-            <li><a href="#">New Uploads</a></li>
-          </ul>
         </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <ul class="links">
-            <li><a href="#">Customer Agreement</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">GDPR</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Media Kit</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Newsletter</h4>
-          <p>
-            Subscribe to our newsletter for a weekly dose
-            of news, updates, helpful tips, and
-            exclusive offers.
-          </p>
-          <form action="#">
-            <input type="text" placeholder="Your email" required/>
-            <button type="submit">SUBSCRIBE</button>
-          </form>
-          <div class="icons">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-github"></i>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div className="row">
+            <div className="col-md-12">
+            </div>
     </div>
+
+    </>
   )
 }
 

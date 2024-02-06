@@ -4,8 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Link, BrowserRouter as Router, Route ,Routes} from 'react-router-dom';
+import Axios  from 'axios';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+Axios.defaults.baseURL = process.env.REACT_APP_DOMAIN;
+
+export const ElearningAxios = 'http://localhost:5001'
+
+
 root.render(
   <React.StrictMode>
     <Router >

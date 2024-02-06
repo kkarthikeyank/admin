@@ -18,7 +18,7 @@ function App() {
     <Route path="/allDetails/:detailsId" element={<Alldetails/>} />
 
 </Routes>
-{/* <Footer/> */}
+<Footer/>
    </div>
   );
 }

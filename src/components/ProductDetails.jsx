@@ -3,21 +3,34 @@ import carImage from "../assets/image/evgeny-tchebotarev-aiwuLjLPFnU-unsplash.jp
 import { useLocation } from "react-router-dom";
 import { Link, BrowserRouter as Router, Route } from 'react-router-dom';
 import { useParams } from "react-router-dom";
+import Loader from "./Loader";
+import { ElearningAxios } from "..";
 const ProductDetails = () => {
   const { productId } = useParams();
   const [listAll, setAlllist] = useState([]);
-  const title = listAll[0]?.title || "";
+  console.log(listAll,"listAll")
+  const title = listAll[0]?.CarShowroom?.title || "";
+  const [isLoading, setIsLoading] = useState(true); // Track loading state
 
   useEffect(() => {
-    fetch(`https://product-details.onrender.com/api/courses/${productId}`)
+    fetch(ElearningAxios+`/api/Productdetails`)
       .then((response) => response.json())
       .then((data) => {
-        setAlllist(data?.data);
+        let Productdetails = data?.data?.filter((dataID)=>dataID?.CarShowroom?._id === productId)
+        setAlllist(Productdetails);
+        setIsLoading(false); // Set loading to false when data is fetched
+
       })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, [listAll]);
+      .catch((error) => console.error("Error fetching data:", error),
+      setIsLoading(false)// Set loading to false on error
+      );
+
+  }, []);
   return (
-    <div className="product_details">
+    <div>
+       {isLoading ? ( // Render loader if isLoading is true
+        <Loader/>
+      ) : ( <div className="product_details">
       <nav class="navbar fixed-top navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -25,23 +38,30 @@ const ProductDetails = () => {
           </a>
         </div>
       </nav>
-      <Link to={`/allDetails/2`}>
+<div className="row row-cols-1 row-cols-md-3 g-4">
+      {listAll?.map((cardList)=>{
+        console.log(cardList,"cardList")
+        return(  <Link to={`/allDetails/${cardList?._id}`}>
 
-      <div class="card" style={{ width: "18rem", marginTop: "90px" }}>
-        <img src={carImage} class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">
-            More details
-          </a>
+        <div class="card col " >
+          <img src={cardList?.carImages} class="card-img-top" alt="..." />
+          <div class="card-body ">
+            <h5 class="card-title">{cardList?.carName}</h5>
+            <p class="card-text">
+             {cardList?.carDescription}
+            </p>
+            <a href="#" class="btn btn-primary">
+              More details
+            </a>
+          </div>
         </div>
+  </Link>)
+      })}
+  </div>
+    
+    </div> )}
       </div>
-</Link>
-    </div>
+   
   );
 };
 

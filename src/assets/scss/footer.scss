@@ -1,137 +1,135 @@
-/* Importing Google font - Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+.footer_email {
+  color: #616161;
+  line-height: 2;
+  font-weight: 500;
 }
 
-.footer {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   max-width: 1280px;
-//   width: 95%;
-  background: #10182F;
-  border-radius: 6px;
-}
-
-.footer .footer-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 3.5rem;
-  padding: 60px;
-}
-
-.footer-row .footer-col h4 {
-  color: #fff;
-  font-size: 1.2rem;
+.footer_phone {
+  color: #757575;
   font-weight: 400;
+  line-height: 1.2rem;
+  letter-spacing: 0;
+  font-size: 1rem;
 }
 
-.footer-col .links {
+.social_ul {
+  display: inline-block;
+  padding-left: 0;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
   margin-top: 20px;
 }
 
-.footer-col .links li {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-.footer-col .links li a {
+.social_ul li {
+  width: auto !important;
+  display: inline-block !important;
+  vertical-align: top;
+  clear: none !important;
+  margin: 0 0 8px;
+  padding: 0;
   text-decoration: none;
-  color: #bfbfbf;
 }
 
-.footer-col .links li a:hover {
-  color: #fff;
+.social_ul a {
+  display: block;
+  background-color: transparent;
+  border: 2px solid #666;
+  width: 36px;
+  height: 36px;
+  color: #666;
+  font-size: 16px;
+  line-height: 34px !important;
+  margin-right: 4px;
+  border-radius: 100%;
+  text-decoration: none;
+
 }
 
-.footer-col p {
-  margin: 20px 0;
-  color: #bfbfbf;
-  max-width: 300px;
+.footer_product ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.footer-col form {
-  display: flex;
-  gap: 5px;
+.footer_product li {
+  font-size: 1rem;
+  width: auto !important;
+  display: block !important;
+  clear: none !important;
+  margin: 0 0 9px;
+  padding: 0;
 }
 
-.footer-col input {
-  height: 40px;
-  border-radius: 6px;
-  background: none;
-  width: 100%;
-  outline: none;
-  border: 1px solid #7489C6 ;
-  caret-color: #fff;
-  color: #fff;
-  padding-left: 10px;
-}
-
-.footer-col input::placeholder {
-  color: #ccc;
-}
-
- .footer-col form button {
-  background: #fff;
-  outline: none;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
+.footer_product a {
+  color: #bdbdbd !important;
+  transition: all .4s ease-in-out;
   font-weight: 500;
-  transition: 0.2s ease;
+  font-size: 15px;
 }
 
-.footer-col form button:hover {
-  background: #cecccc;
-}
-
-.footer-col .icons {
-  display: flex;
-  margin-top: 30px;
-  gap: 30px;
-  cursor: pointer;
-}
-
-.footer-col .icons i {
-  color: #afb6c7;
-}
-
-.footer-col .icons i:hover  {
+.h5_product {
+  line-height: 1;
+  margin-bottom: 25px;
   color: #fff;
+  font-family: Manrope, sans-serif;
+  font-weight: 600;
+  letter-spacing: -.5px;
+  font-size: 16px;
 }
 
-@media (max-width: 768px) {
-  .footer {
-    // position: relative;
-    // bottom: 0;
-    // left: 0;
-    // transform: none;
-    width: 100%;
-    border-radius: 0;
-  }
+.footer_Subscribe p {
+  color: #757575;
+  font-weight: 400;
+  line-height: 1.2rem;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  font-size: .95rem;
+}
 
-  .footer .footer-row {
-    padding: 20px;
-    gap: 1rem;
-  }
+.form_footer {
+  height: 48px;
+  background-color: #fff;
+  border: 1px solid #e5e8ee;
+  color: #3a4966;
+  font-size: 1rem;
+  padding: 0 15px;
+  border-radius: 4px 0 0 4px;
+  transition: all .4s ease-in-out;
+  border-radius: 8px;
+  margin-top: 18px;
+  width: 100%;
+}
 
-  .footer-col form {
-    display: block;
+.border_footer {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+  padding-top: 30px;
+  .footer_icon{
+      width: 127px;
+  filter: brightness(0) invert(1);
+  height: 45px;
+  margin-bottom: 20px;
   }
+}
 
-  .footer-col form :where(input, button) {
-    width: 100%;
-  }
+.footer-copyright {
+  color: #757575;
+  font-weight: 400;
+  line-height: 1.2rem;
+  letter-spacing: 0;
+  font-size: .95rem;
+  margin-bottom: 40px;
+text-align: center;
+}
 
-  .footer-col form button {
-    margin: 10px 0 0 0;
-  }
+.footer-copyright span {
+  font-weight: 700;
+}
+
+
+.total_footer{
+  background-color: #232323;
 }
